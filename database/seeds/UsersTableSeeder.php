@@ -12,19 +12,18 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->delete();
-
-        App\User::create([
-            'name' => 'usuario', 
-            'surname' => 'administrador',
+        DB::table('users')->insert([
+            'name' => 'Admin',
+            'surname' => 'Admin',
             'role_id' => 1,
-            'cedula' => "123456789",
-            'phone' => "123456789", 
-            'address' => "123456789", 
-            'email' => "admin@gmail.com", 
-            'password' => Hash::make("hola123")
+            'cedula' => "12376312",
+            'phone' => "12390837",
+            'address' => "cra 25 #26-7",
+            'email' => 'admin@material.com',
+            'email_verified_at' => now(),
+            'password' => Hash::make('secret'),
+            'created_at' => now(),
+            'updated_at' => now()
         ]);
-
-        
     }
 }
