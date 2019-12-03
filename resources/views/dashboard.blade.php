@@ -4,7 +4,7 @@
   <div class="content">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-3 col-md-6 col-sm-6">
+        <!--<div class="col-lg-3 col-md-6 col-sm-6">
           <div class="card card-stats">
             <div class="card-header card-header-warning card-header-icon">
               <div class="card-icon">
@@ -71,6 +71,7 @@
             </div>
           </div>
         </div>
+      </div> -->
       </div>
       <div class="row">
         <div class="col-md-4">
@@ -79,9 +80,9 @@
               <div class="ct-chart" id="dailySalesChart"></div>
             </div>
             <div class="card-body">
-              <h4 class="card-title">Daily Sales</h4>
+              <h4 class="card-title">USUARIOS</h4>
               <p class="card-category">
-                <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> increase in today sales.</p>
+                <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> descripcion</p>
             </div>
             <div class="card-footer">
               <div class="stats">
@@ -96,8 +97,8 @@
               <div class="ct-chart" id="websiteViewsChart"></div>
             </div>
             <div class="card-body">
-              <h4 class="card-title">Email Subscriptions</h4>
-              <p class="card-category">Last Campaign Performance</p>
+              <h4 class="card-title">BOLSAS </h4>
+              <p class="card-category">descripcion</p>
             </div>
             <div class="card-footer">
               <div class="stats">
@@ -112,8 +113,8 @@
               <div class="ct-chart" id="completedTasksChart"></div>
             </div>
             <div class="card-body">
-              <h4 class="card-title">Completed Tasks</h4>
-              <p class="card-category">Last Campaign Performance</p>
+              <h4 class="card-title">MASCOTAS</h4>
+              <p class="card-category">descripcion</p>
             </div>
             <div class="card-footer">
               <div class="stats">
@@ -124,7 +125,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-6 col-md-12">
+        <!--<div class="col-lg-6 col-md-12">
           <div class="card">
             <div class="card-header card-header-tabs card-header-primary">
               <div class="nav-tabs-navigation">
@@ -368,20 +369,21 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-lg-6 col-md-12">
+        </div>-->
+
+     <!--   <div class="col-lg-12 col-md-12">
           <div class="card">
             <div class="card-header card-header-warning">
-              <h4 class="card-title">Employees Stats</h4>
-              <p class="card-category">New employees on 15th September, 2016</p>
+              <h4 class="card-title">Empleados disponibles</h4>
+              <p class="card-category">descripcion</p>
             </div>
             <div class="card-body table-responsive">
               <table class="table table-hover">
                 <thead class="text-warning">
                   <th>ID</th>
-                  <th>Name</th>
-                  <th>Salary</th>
-                  <th>Country</th>
+                  <th>Nombre</th>
+                  <th>Area</th>
+                  <th>Pais</th>
                 </thead>
                 <tbody>
                   <tr>
@@ -415,7 +417,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div>-->
 @endsection
 
 @push('js')

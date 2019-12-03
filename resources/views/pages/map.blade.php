@@ -1,7 +1,13 @@
-@extends('layouts.app', ['activePage' => 'map', 'titlePage' => __('Map')])
+@extends('layouts.app', ['activePage' => 'map', 'titlePage' => __('Dispensadores')])
 
 @section('content')
-<div id="map"></div>
+<div class="row">
+        <div class="col-12 text-right">
+          <a href="{{ route('user.create') }}" class="btn btn-sm btn-primary">{{ __('Agregar') }}</a>
+        </div>
+</div>
+<div id="map">
+</div>
 @endsection
 
 @push('js')

@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'user-management', 'titlePage' => __('User Management')])
+@extends('layouts.app', ['activePage' => 'user-management', 'titlePage' => __('Administracion de usuarios')])
 
 @section('content')
   <div class="content">
@@ -7,8 +7,8 @@
         <div class="col-md-12">
             <div class="card">
               <div class="card-header card-header-primary">
-                <h4 class="card-title ">{{ __('Users') }}</h4>
-                <p class="card-category"> {{ __('Here you can manage users') }}</p>
+                <h4 class="card-title ">{{ __('Usuarios') }}</h4>
+                <p class="card-category"> {{ __('descripcion') }}</p>
               </div>
               <div class="card-body">
                 @if (session('status'))
@@ -25,20 +25,20 @@
                 @endif
                 <div class="row">
                   <div class="col-12 text-right">
-                    <a href="{{ route('user.create') }}" class="btn btn-sm btn-primary">{{ __('Add user') }}</a>
+                    <a href="{{ route('user.create') }}" class="btn btn-sm btn-primary">{{ __('Agregar') }}</a>
                   </div>
                 </div>
                 <div class="table-responsive">
                   <table class="table">
                     <thead class=" text-primary">
                       <th>
-                          {{ __('Name') }}
+                          {{ __('Nombre') }}
                       </th>
                       <th>
                         {{ __('Email') }}
                       </th>
                       <th>
-                        {{ __('Creation date') }}
+                        {{ __('Fecha de creación') }}
                       </th>
                       <th class="text-right">
                         {{ __('Actions') }}
@@ -61,7 +61,7 @@
                               <form action="{{ route('user.destroy', $user) }}" method="post">
                                   @csrf
                                   @method('delete')
-                              
+
                                   <a rel="tooltip" class="btn btn-success btn-link" href="{{ route('user.edit', $user) }}" data-original-title="" title="">
                                     <i class="material-icons">edit</i>
                                     <div class="ripple-container"></div>
