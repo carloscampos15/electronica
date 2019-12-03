@@ -35,8 +35,8 @@
           </ul>
         </div>
       </li>-->
-      <li class="nav-item{{ $activePage == 'table' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('table') }}">
+      <li class="nav-item{{ $activePage == 'user-management' ? ' active' : '' }}">
+        <a class="nav-link" href="{{ route('user.index') }}">
           <i class="material-icons">content_paste</i>
             <p>{{ __('Gestion de usuarios') }}</p>
         </a>
