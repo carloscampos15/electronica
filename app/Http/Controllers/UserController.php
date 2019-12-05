@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Card;
 use App\Http\Requests\UserRequest;
 use Illuminate\Support\Facades\Hash;
 
@@ -16,7 +17,8 @@ class UserController extends Controller
      */
     public function index(User $model)
     {
-        return view('users.index', ['users' => $model->paginate(15)]);
+        $users = User::role('user')->get();    
+        return view('users.index', ['users' => $users]);
     }
 
     /**
@@ -38,7 +40,17 @@ class UserController extends Controller
      */
     public function store(UserRequest $request, User $model)
     {
-        $model->create($request->merge(['password' => Hash::make($request->get('password'))])->all());
+        $input = $request->all();
+        $user = new User();
+        $user->fill($input);
+        $user->password = Hash::make("secret");
+        $user->assignRole('user');
+        $user->save();
+
+        Card::create([
+            "user_id" => $user->id,
+            "card"    => $request->card
+        ]);
 
         return redirect()->route('user.index')->withStatus(__('User successfully created.'));
     }

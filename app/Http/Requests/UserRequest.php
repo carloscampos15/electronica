@@ -29,6 +29,21 @@ class UserRequest extends FormRequest
             'name' => [
                 'required', 'min:3'
             ],
+            'surname' => [
+                'required', 'min:3'
+            ],
+            'cedula' => [
+                'required', 'min:3'
+            ],
+            'phone' => [
+                'required', 'min:3'
+            ],
+            'address' => [
+                'required', 'min:3'
+            ],
+            'card' => [
+                'required', 'min:3'
+            ],
             'email' => [
                 'required', 'email', Rule::unique((new User)->getTable())->ignore($this->route()->user->id ?? null)
             ],

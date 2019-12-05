@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Spatie\Permission\Models\Role;
 
 class RolesTableSeeder extends Seeder
 {
@@ -13,14 +14,7 @@ class RolesTableSeeder extends Seeder
     {
         DB::table('roles')->delete();
 
-        App\Role::create([
-            'name' => 'Admin',
-            'description' => 'administrador',
-        ]);
-
-        App\Role::create([
-            'name' => 'User',
-            'description' => 'usuario',
-        ]);
+        Role::create(['name' => 'admin']);
+        Role::create(['name' => 'user']);
     }
 }
