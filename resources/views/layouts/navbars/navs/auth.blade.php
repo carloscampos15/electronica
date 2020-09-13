@@ -29,7 +29,7 @@
             </p>
           </a>
         </li> --}}
-        <li class="nav-item dropdown">
+        {{-- <li class="nav-item dropdown">
           <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="material-icons">notifications</i>
             <span class="notification">1</span>
@@ -40,7 +40,7 @@
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="#">{{ __('Notificacion 1') }}</a>
           </div>
-        </li>
+        </li> --}}
         <li class="nav-item dropdown">
           <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="material-icons">person</i>
