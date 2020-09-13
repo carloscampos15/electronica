@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'user-management', 'titlePage' => __('Administracion de usuarios')])
+@extends('layouts.app', ['activePage' => 'user-management', 'titlePage' => __('Administración de usuarios')])
 
 @section('content')
   <div class="content">
@@ -8,7 +8,6 @@
             <div class="card">
               <div class="card-header card-header-primary">
                 <h4 class="card-title ">{{ __('Usuarios') }}</h4>
-                <p class="card-category"> {{ __('descripcion') }}</p>
               </div>
               <div class="card-body">
                 @if (session('status'))
@@ -41,7 +40,7 @@
                         {{ __('Fecha de creación') }}
                       </th>
                       <th class="text-right">
-                        {{ __('Actions') }}
+                        {{ __('Acciones') }}
                       </th>
                     </thead>
                     <tbody>

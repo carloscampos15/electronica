@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'user-management', 'titlePage' => __('User Management')])
+@extends('layouts.app', ['activePage' => 'user-management', 'titlePage' => __('Administración de usuarios')])
 
 @section('content')
 <div class="content">
@@ -13,17 +13,17 @@
 
           <div class="card ">
             <div class="card-header card-header-primary">
-              <h4 class="card-title">{{ __('Add User') }}</h4>
+              <h4 class="card-title">{{ __('Agregar usuario') }}</h4>
               <p class="card-category"></p>
             </div>
             <div class="card-body ">
               <div class="row">
                 <div class="col-md-12 text-right">
-                  <a href="{{ route('user.index') }}" class="btn btn-sm btn-primary">{{ __('Back to list') }}</a>
+                  <a href="{{ route('user.index') }}" class="btn btn-sm btn-primary">{{ __('Regresar') }}</a>
                 </div>
               </div>
               <div class="row">
-                <label class="col-sm-2 col-form-label">{{ __('Name') }}</label>
+                <label class="col-sm-2 col-form-label">{{ __('Nombre') }}</label>
                 <div class="col-sm-7">
                   <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
                     <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name"
@@ -36,7 +36,7 @@
                 </div>
               </div>
               <div class="row">
-                <label class="col-sm-2 col-form-label">{{ __('Surname') }}</label>
+                <label class="col-sm-2 col-form-label">{{ __('Apellido') }}</label>
                 <div class="col-sm-7">
                   <div class="form-group{{ $errors->has('surname') ? ' has-danger' : '' }}">
                     <input class="form-control{{ $errors->has('surname') ? ' is-invalid' : '' }}" name="surname"
@@ -64,7 +64,7 @@
                 </div>
               </div>
               <div class="row">
-                <label class="col-sm-2 col-form-label">{{ __('Phone') }}</label>
+                <label class="col-sm-2 col-form-label">{{ __('Celular') }}</label>
                 <div class="col-sm-7">
                   <div class="form-group{{ $errors->has('phone') ? ' has-danger' : '' }}">
                     <input class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" name="phone"
@@ -78,7 +78,7 @@
                 </div>
               </div>
               <div class="row">
-                <label class="col-sm-2 col-form-label">{{ __('Address') }}</label>
+                <label class="col-sm-2 col-form-label">{{ __('Dirección') }}</label>
                 <div class="col-sm-7">
                   <div class="form-group{{ $errors->has('address') ? ' has-danger' : '' }}">
                     <input class="form-control{{ $errors->has('address') ? ' is-invalid' : '' }}" name="address"
@@ -120,7 +120,7 @@
                 </div>
               </div>
               <div class="row">
-                <label class="col-sm-2 col-form-label" for="input-password">{{ __(' Password') }}</label>
+                <label class="col-sm-2 col-form-label" for="input-password">{{ __('Contraseña') }}</label>
                 <div class="col-sm-7">
                   <div class="form-group{{ $errors->has('password') ? ' has-danger' : '' }}">
                     <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" input type="password"
@@ -134,7 +134,7 @@
               </div>
               <div class="row">
                 <label class="col-sm-2 col-form-label"
-                  for="input-password-confirmation">{{ __('Confirm Password') }}</label>
+                  for="input-password-confirmation">{{ __('Confirmar contraseña') }}</label>
                 <div class="col-sm-7">
                   <div class="form-group">
                     <input class="form-control" name="password_confirmation" id="input-password-confirmation"
@@ -144,7 +144,7 @@
               </div>
             </div>
             <div class="card-footer ml-auto mr-auto">
-              <button type="submit" class="btn btn-primary">{{ __('Add User') }}</button>
+              <button type="submit" class="btn btn-primary">{{ __('Crear') }}</button>
             </div>
           </div>
         </form>
