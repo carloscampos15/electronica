@@ -6,7 +6,7 @@
       <div class="row">
         <div class="col-md-12">
             <div class="card">
-              <div class="card-header card-header-primary">
+              <div class="card-header card-header-primary custom-card-header">
                 <h4 class="card-title ">{{ __('Usuarios') }}</h4>
               </div>
               <div class="card-body">
@@ -24,7 +24,7 @@
                 @endif
                 <div class="row">
                   <div class="col-12 text-right">
-                    <a href="{{ route('user.create') }}" class="btn btn-sm btn-primary">{{ __('Agregar') }}</a>
+                    <a href="{{ route('user.create') }}" class="btn btn-sm btn-primary custom-btn-primary">{{ __('Agregar') }}</a>
                   </div>
                 </div>
                 <div class="table-responsive">

@@ -11,7 +11,7 @@
                         @method('put')
 
                         <div class="card ">
-                            <div class="card-header card-header-primary">
+                            <div class="card-header card-header-primary custom-card-header">
                                 <h4 class="card-title">{{ __('Editar') }}</h4>
                                 <p class="card-category"></p>
                             </div>
@@ -19,7 +19,7 @@
                                 <div class="row">
                                     <div class="col-md-12 text-right">
                                         <a href="{{ route('device.index') }}"
-                                            class="btn btn-sm btn-primary">{{ __('Regresar') }}</a>
+                                            class="btn btn-sm btn-primary custom-btn-primary">{{ __('Regresar') }}</a>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -53,7 +53,7 @@
                                 </div>
                             </div>
                             <div class="card-footer ml-auto mr-auto">
-                                <button type="submit" class="btn btn-primary">{{ __('Guardar') }}</button>
+                                <button type="submit" class="btn btn-primary custom-btn-primary">{{ __('Guardar') }}</button>
                             </div>
                         </div>
                     </form>

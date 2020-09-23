@@ -1,4 +1,4 @@
-<div class="sidebar" data-color="orange" data-background-color="white"
+<div class="sidebar" data-color="blue" data-background-color="white"
     data-image="{{ asset('material') }}/img/sidebar-1.jpg">
     <!--
       Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
@@ -6,7 +6,7 @@
       Tip 2: you can also add an image using data-image tag
   -->
     <div class="logo text-center">
-        <h4>{{ __('Sistema de gestión de recolección de heses caninas') }}</h4>
+        <h4>{{ __('Sistema de gestión de recolección de heces caninas') }}</h4>
     </div>
     <div class="sidebar-wrapper">
         <ul class="nav">

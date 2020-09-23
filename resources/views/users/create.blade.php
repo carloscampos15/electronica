@@ -12,14 +12,14 @@
           {{-- 'name', 'surname', 'cedula', 'phone', 'address', 'email', 'password', --}}
 
           <div class="card ">
-            <div class="card-header card-header-primary">
+            <div class="card-header card-header-primary custom-card-header">
               <h4 class="card-title">{{ __('Agregar usuario') }}</h4>
               <p class="card-category"></p>
             </div>
             <div class="card-body ">
               <div class="row">
                 <div class="col-md-12 text-right">
-                  <a href="{{ route('user.index') }}" class="btn btn-sm btn-primary">{{ __('Regresar') }}</a>
+                  <a href="{{ route('user.index') }}" class="btn btn-sm btn-primary custom-btn-primary">{{ __('Regresar') }}</a>
                 </div>
               </div>
               <div class="row">
@@ -27,7 +27,7 @@
                 <div class="col-sm-7">
                   <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
                     <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name"
-                      id="input-name" type="text" placeholder="{{ __('Name') }}" value="{{ old('name') }}"
+                      id="input-name" type="text" placeholder="{{ __('Nombre') }}" value="{{ old('name') }}"
                       required="true" aria-required="true" />
                     @if ($errors->has('name'))
                     <span id="name-error" class="error text-danger" for="input-name">{{ $errors->first('name') }}</span>
@@ -40,7 +40,7 @@
                 <div class="col-sm-7">
                   <div class="form-group{{ $errors->has('surname') ? ' has-danger' : '' }}">
                     <input class="form-control{{ $errors->has('surname') ? ' is-invalid' : '' }}" name="surname"
-                      id="input-surname" type="text" placeholder="{{ __('surname') }}" value="{{ old('surname') }}"
+                      id="input-surname" type="text" placeholder="{{ __('Apellido') }}" value="{{ old('surname') }}"
                       required="true" aria-required="true" />
                     @if ($errors->has('surname'))
                     <span id="name-error" class="error text-danger"
@@ -54,7 +54,7 @@
                 <div class="col-sm-7">
                   <div class="form-group{{ $errors->has('cedula') ? ' has-danger' : '' }}">
                     <input class="form-control{{ $errors->has('cedula') ? ' is-invalid' : '' }}" name="cedula"
-                      id="input-cedula" type="text" placeholder="{{ __('cedula') }}" value="{{ old('cedula') }}"
+                      id="input-cedula" type="text" placeholder="{{ __('Cedula') }}" value="{{ old('cedula') }}"
                       required="true" aria-required="true" />
                     @if ($errors->has('cedula'))
                     <span id="name-error" class="error text-danger"
@@ -68,7 +68,7 @@
                 <div class="col-sm-7">
                   <div class="form-group{{ $errors->has('phone') ? ' has-danger' : '' }}">
                     <input class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" name="phone"
-                      id="input-phone" type="text" placeholder="{{ __('phone') }}" value="{{ old('phone') }}"
+                      id="input-phone" type="text" placeholder="{{ __('Celular') }}" value="{{ old('phone') }}"
                       required="true" aria-required="true" />
                     @if ($errors->has('phone'))
                     <span id="name-error" class="error text-danger"
@@ -82,7 +82,7 @@
                 <div class="col-sm-7">
                   <div class="form-group{{ $errors->has('address') ? ' has-danger' : '' }}">
                     <input class="form-control{{ $errors->has('address') ? ' is-invalid' : '' }}" name="address"
-                      id="input-address" type="text" placeholder="{{ __('address') }}" value="{{ old('address') }}"
+                      id="input-address" type="text" placeholder="{{ __('Dirección') }}" value="{{ old('address') }}"
                       required="true" aria-required="true" />
                     @if ($errors->has('address'))
                     <span id="name-error" class="error text-danger"
@@ -96,7 +96,7 @@
                 <div class="col-sm-7">
                   <div class="form-group{{ $errors->has('card') ? ' has-danger' : '' }}">
                     <input class="form-control{{ $errors->has('card') ? ' is-invalid' : '' }}" name="card"
-                      id="input-card" type="text" placeholder="{{ __('card') }}" value="{{ old('card') }}"
+                      id="input-card" type="text" placeholder="{{ __('Card id') }}" value="{{ old('card') }}"
                       required="true" aria-required="true" />
                     @if ($errors->has('card'))
                     <span id="name-error" class="error text-danger"
@@ -124,7 +124,7 @@
                 <div class="col-sm-7">
                   <div class="form-group{{ $errors->has('password') ? ' has-danger' : '' }}">
                     <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" input type="password"
-                      name="password" id="input-password" placeholder="{{ __('Password') }}" value="" required />
+                      name="password" id="input-password" placeholder="{{ __('Contraseña') }}" value="" required />
                     @if ($errors->has('password'))
                     <span id="name-error" class="error text-danger"
                       for="input-name">{{ $errors->first('password') }}</span>
@@ -138,13 +138,13 @@
                 <div class="col-sm-7">
                   <div class="form-group">
                     <input class="form-control" name="password_confirmation" id="input-password-confirmation"
-                      type="password" placeholder="{{ __('Confirm Password') }}" value="" required />
+                      type="password" placeholder="{{ __('Confirmar contraseña') }}" value="" required />
                   </div>
                 </div>
               </div>
             </div>
             <div class="card-footer ml-auto mr-auto">
-              <button type="submit" class="btn btn-primary">{{ __('Crear') }}</button>
+              <button type="submit" class="btn btn-primary custom-btn-primary">{{ __('Crear') }}</button>
             </div>
           </div>
         </form>

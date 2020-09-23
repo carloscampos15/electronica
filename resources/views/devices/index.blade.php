@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-                        <div class="card-header card-header-primary">
+                        <div class="card-header card-header-primary custom-card-header">
                             <h4 class="card-title ">{{ __('Dispositivos') }}</h4>
                         </div>
                         <div class="card-body">
@@ -25,7 +25,7 @@
                             <div class="row">
                                 <div class="col-12 text-right">
                                     <a href="{{ route('device.create') }}"
-                                        class="btn btn-sm btn-primary">{{ __('Agregar') }}</a>
+                                        class="btn btn-sm btn-primary custom-btn-primary">{{ __('Agregar') }}</a>
                                 </div>
                             </div>
                             <div class="table-responsive">

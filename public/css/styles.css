@@ -1,0 +1,35 @@
+.custom-card-header {
+    background: linear-gradient(60deg, #5b95ff, #4185ff) !important;
+}
+
+.custom-btn {
+    color: #4185ff !important;
+}
+
+.custom-btn-primary {
+    background-color: #4185ff !important;
+    border-color: #4185ff !important;
+}
+
+.form-control,
+.is-focused .form-contro {
+    background-image: linear-gradient(
+            to top,
+            #5b95ff 2px,
+            rgba(156, 39, 176, 0) 2px
+        ),
+        linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px) !important;
+}
+
+.dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:focus, .dropdown-menu a:hover, .dropdown-menu a:focus, .dropdown-menu a:active{
+    background-color: #5b95ff !important;
+}
+
+.sidebar[data-color="blue"] li.active>a {
+    background-color: #4185ff;
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(255, 152, 0, 0.4);
+}
+
+.text-primary {
+    color: #2196f3 !important;
+}
