@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\Card;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\UserRequest;
+use App\Http\Requests\UserUpdateRequest;
+use App\Http\Requests\UserPasswordRequest;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -73,13 +76,23 @@ class UserController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(UserRequest $request, User  $user)
+    public function update(UserUpdateRequest $request, User  $user)
     {
-        $hasPassword = $request->get('password');
-        $user->update(
-            $request->merge(['password' => Hash::make($request->get('password'))])
-                ->except([$hasPassword ? '' : 'password']
-        ));
+        $input = $request->all();
+        $user->fill($input);
+
+        $card = Card::find($user->card->id);
+        $card->card = $input['card'];
+        $card->save();
+
+        $user->save();
+        return redirect()->route('user.index')->withStatus(__('User successfully updated.'));
+    }
+
+    public function updatePassword(UserPasswordRequest $request, User $user){
+        $input = $request->all();
+        $user->password = Hash::make($input['password']);
+        $user->save();
 
         return redirect()->route('user.index')->withStatus(__('User successfully updated.'));
     }

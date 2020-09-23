@@ -11,7 +11,7 @@
 
             <div class="card ">
               <div class="card-header card-header-primary custom-card-header">
-                <h4 class="card-title">{{ __('Editar') }}</h4>
+                <h4 class="card-title">{{ __('Editar información del usuario') }}</h4>
                 <p class="card-category"></p>
               </div>
               <div class="card-body ">
@@ -32,6 +32,76 @@
                   </div>
                 </div>
                 <div class="row">
+                  <label class="col-sm-2 col-form-label">{{ __('Apellido') }}</label>
+                  <div class="col-sm-7">
+                    <div class="form-group{{ $errors->has('surname') ? ' has-danger' : '' }}">
+                      <input class="form-control{{ $errors->has('surname') ? ' is-invalid' : '' }}" name="surname"
+                        id="input-surname" type="text" placeholder="{{ __('Apellido') }}" value="{{ old('surname', $user->surname) }}"
+                        required="true" aria-required="true" />
+                      @if ($errors->has('surname'))
+                      <span id="name-error" class="error text-danger"
+                        for="input-surname">{{ $errors->first('surname') }}</span>
+                      @endif
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-sm-2 col-form-label">{{ __('Cedula') }}</label>
+                  <div class="col-sm-7">
+                    <div class="form-group{{ $errors->has('cedula') ? ' has-danger' : '' }}">
+                      <input class="form-control{{ $errors->has('cedula') ? ' is-invalid' : '' }}" name="cedula"
+                        id="input-cedula" type="text" placeholder="{{ __('Cedula') }}" value="{{ old('cedula', $user->cedula) }}"
+                        required="true" aria-required="true" />
+                      @if ($errors->has('cedula'))
+                      <span id="name-error" class="error text-danger"
+                        for="input-cedula">{{ $errors->first('cedula') }}</span>
+                      @endif
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-sm-2 col-form-label">{{ __('Celular') }}</label>
+                  <div class="col-sm-7">
+                    <div class="form-group{{ $errors->has('phone') ? ' has-danger' : '' }}">
+                      <input class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" name="phone"
+                        id="input-phone" type="text" placeholder="{{ __('Celular') }}" value="{{ old('phone', $user->phone) }}"
+                        required="true" aria-required="true" />
+                      @if ($errors->has('phone'))
+                      <span id="name-error" class="error text-danger"
+                        for="input-phone">{{ $errors->first('phone') }}</span>
+                      @endif
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-sm-2 col-form-label">{{ __('Dirección') }}</label>
+                  <div class="col-sm-7">
+                    <div class="form-group{{ $errors->has('address') ? ' has-danger' : '' }}">
+                      <input class="form-control{{ $errors->has('address') ? ' is-invalid' : '' }}" name="address"
+                        id="input-address" type="text" placeholder="{{ __('Dirección') }}" value="{{ old('address', $user->address) }}"
+                        required="true" aria-required="true" />
+                      @if ($errors->has('address'))
+                      <span id="name-error" class="error text-danger"
+                        for="input-address">{{ $errors->first('address') }}</span>
+                      @endif
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-sm-2 col-form-label">{{ __('Card id') }}</label>
+                  <div class="col-sm-7">
+                    <div class="form-group{{ $errors->has('card') ? ' has-danger' : '' }}">
+                      <input class="form-control{{ $errors->has('card') ? ' is-invalid' : '' }}" name="card"
+                        id="input-card" type="text" placeholder="{{ __('Card id') }}" value="{{ old('card', $user->card->card) }}"
+                        required="true" aria-required="true" />
+                      @if ($errors->has('card'))
+                      <span id="name-error" class="error text-danger"
+                        for="input-card">{{ $errors->first('card') }}</span>
+                      @endif
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
                   <label class="col-sm-2 col-form-label">{{ __('Email') }}</label>
                   <div class="col-sm-7">
                     <div class="form-group{{ $errors->has('email') ? ' has-danger' : '' }}">
@@ -42,6 +112,42 @@
                     </div>
                   </div>
                 </div>
+                {{-- <div class="row">
+                  <label class="col-sm-2 col-form-label" for="input-password">{{ __(' Contraseña') }}</label>
+                  <div class="col-sm-7">
+                    <div class="form-group{{ $errors->has('password') ? ' has-danger' : '' }}">
+                      <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" input type="password" name="password" id="input-password" placeholder="{{ __('Contraseña') }}" />
+                      @if ($errors->has('password'))
+                        <span id="name-error" class="error text-danger" for="input-name">{{ $errors->first('password') }}</span>
+                      @endif
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-sm-2 col-form-label" for="input-password-confirmation">{{ __('Confirmar contraseña') }}</label>
+                  <div class="col-sm-7">
+                    <div class="form-group">
+                      <input class="form-control" name="password_confirmation" id="input-password-confirmation" type="password" placeholder="{{ __('Confirmar Contraseña') }}" />
+                    </div>
+                  </div>
+                </div> --}}
+              </div>
+              <div class="card-footer ml-auto mr-auto">
+                <button type="submit" class="btn btn-primary custom-btn-primary">{{ __('Guardar') }}</button>
+              </div>
+            </div>
+          </form>
+
+          <form method="post" action="{{ route('user.updatePassword', $user) }}" autocomplete="off" class="form-horizontal mt-5">
+            @csrf
+            @method('post')
+
+            <div class="card ">
+              <div class="card-header card-header-primary custom-card-header">
+                <h4 class="card-title">{{ __('Actualizar contraseña') }}</h4>
+                <p class="card-category"></p>
+              </div>
+              <div class="card-body ">
                 <div class="row">
                   <label class="col-sm-2 col-form-label" for="input-password">{{ __(' Contraseña') }}</label>
                   <div class="col-sm-7">
@@ -63,7 +169,7 @@
                 </div>
               </div>
               <div class="card-footer ml-auto mr-auto">
-                <button type="submit" class="btn btn-primary custom-btn-primary">{{ __('Guardar') }}</button>
+                <button type="submit" class="btn btn-primary custom-btn-primary">{{ __('Actualizar') }}</button>
               </div>
             </div>
           </form>
