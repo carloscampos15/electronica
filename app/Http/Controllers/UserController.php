@@ -20,7 +20,7 @@ class UserController extends Controller
      */
     public function index(User $model)
     {
-        $users = User::role('user')->get();    
+        $users = User::role('user')->get();
         return view('users.index', ['users' => $users]);
     }
 

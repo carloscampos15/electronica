@@ -20,7 +20,9 @@ class CreateCardsTable extends Migration
             $table->timestamps();
 
             $table->foreign('user_id')
-                  ->references('id')->on('users');
+                  ->references('id')->on('users')
+                  ->onDelete('cascade')
+                  ->onUpdate('cascade');
         });
     }
 

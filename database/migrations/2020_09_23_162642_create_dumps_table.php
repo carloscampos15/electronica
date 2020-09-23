@@ -22,7 +22,9 @@ class CreateDumpsTable extends Migration
             $table->timestamps();
 
             $table->foreign('device_id')
-            ->references('id')->on('devices');
+            ->references('id')->on('devices')
+            ->onDelete('cascade')
+            ->onUpdate('cascade');
         });
     }
 
