@@ -38,7 +38,7 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <label class="col-sm-2 col-form-label">{{ __('Apellido') }}</label>
+                                    <label class="col-sm-2 col-form-label">{{ __('Serial') }}</label>
                                     <div class="col-sm-7">
                                         <div class="form-group{{ $errors->has('serial') ? ' has-danger' : '' }}">
                                             <input class="form-control{{ $errors->has('serial') ? ' is-invalid' : '' }}"

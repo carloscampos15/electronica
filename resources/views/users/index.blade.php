@@ -60,7 +60,10 @@
                               <form action="{{ route('user.destroy', $user) }}" method="post">
                                   @csrf
                                   @method('delete')
-
+                                  <a rel="tooltip" class="btn btn-warning btn-link" href="{{ route('user.show', $user) }}" data-original-title="" title="">
+                                    <i class="material-icons">visibility</i>
+                                    <div class="ripple-container"></div>
+                                  </a>
                                   <a rel="tooltip" class="btn btn-success btn-link" href="{{ route('user.edit', $user) }}" data-original-title="" title="">
                                     <i class="material-icons">edit</i>
                                     <div class="ripple-container"></div>

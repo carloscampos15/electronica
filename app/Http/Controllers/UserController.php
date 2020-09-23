@@ -35,6 +35,17 @@ class UserController extends Controller
     }
 
     /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show(User $user)
+    {
+        return view('users.show', ['user' => $user]);
+    }
+
+    /**
      * Store a newly created user in storage
      *
      * @param  \App\Http\Requests\UserRequest  $request

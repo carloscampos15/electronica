@@ -31,7 +31,7 @@
                   <label class="col-sm-2 col-form-label">{{ __('Nombre') }}</label>
                   <div class="col-sm-7">
                     <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
-                      <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" id="input-name" type="text" placeholder="{{ __('Name') }}" value="{{ old('name', auth()->user()->name) }}" required="true" aria-required="true"/>
+                      <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" id="input-name" type="text" placeholder="{{ __('Nombre') }}" value="{{ old('name', auth()->user()->name) }}" required="true" aria-required="true"/>
                       @if ($errors->has('name'))
                         <span id="name-error" class="error text-danger" for="input-name">{{ $errors->first('name') }}</span>
                       @endif
@@ -82,10 +82,10 @@
                   </div>
                 @endif
                 <div class="row">
-                  <label class="col-sm-2 col-form-label" for="input-current-password">{{ __('Password actual') }}</label>
+                  <label class="col-sm-2 col-form-label" for="input-current-password">{{ __('Contraseña actual') }}</label>
                   <div class="col-sm-7">
                     <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">
-                      <input class="form-control{{ $errors->has('old_password') ? ' is-invalid' : '' }}" input type="password" name="old_password" id="input-current-password" placeholder="{{ __('Current Password') }}" value="" required />
+                      <input class="form-control{{ $errors->has('old_password') ? ' is-invalid' : '' }}" input type="password" name="old_password" id="input-current-password" placeholder="{{ __('Contraseña actual') }}" value="" required />
                       @if ($errors->has('old_password'))
                         <span id="name-error" class="error text-danger" for="input-name">{{ $errors->first('old_password') }}</span>
                       @endif
@@ -93,10 +93,10 @@
                   </div>
                 </div>
                 <div class="row">
-                  <label class="col-sm-2 col-form-label" for="input-password">{{ __('Password nuevo') }}</label>
+                  <label class="col-sm-2 col-form-label" for="input-password">{{ __('Contraseña nueva') }}</label>
                   <div class="col-sm-7">
                     <div class="form-group{{ $errors->has('password') ? ' has-danger' : '' }}">
-                      <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" id="input-password" type="password" placeholder="{{ __('New Password') }}" value="" required />
+                      <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" id="input-password" type="password" placeholder="{{ __('Contraseña nueva') }}" value="" required />
                       @if ($errors->has('password'))
                         <span id="password-error" class="error text-danger" for="input-password">{{ $errors->first('password') }}</span>
                       @endif
@@ -104,10 +104,10 @@
                   </div>
                 </div>
                 <div class="row">
-                  <label class="col-sm-2 col-form-label" for="input-password-confirmation">{{ __('Confirmacion Password nuevo') }}</label>
+                  <label class="col-sm-2 col-form-label" for="input-password-confirmation">{{ __('Confirmar contraseña nueva') }}</label>
                   <div class="col-sm-7">
                     <div class="form-group">
-                      <input class="form-control" name="password_confirmation" id="input-password-confirmation" type="password" placeholder="{{ __('Confirm New Password') }}" value="" required />
+                      <input class="form-control" name="password_confirmation" id="input-password-confirmation" type="password" placeholder="{{ __('Confirmar contraseña nueva') }}" value="" required />
                     </div>
                   </div>
                 </div>

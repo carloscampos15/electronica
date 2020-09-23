@@ -19,13 +19,19 @@
             <li class="nav-item{{ $activePage == 'user-management' ? ' active' : '' }}">
                 <a class="nav-link" href="{{ route('user.index') }}">
                     <i class="material-icons">content_paste</i>
-                    <p>{{ __('Gestion de usuarios') }}</p>
+                    <p>{{ __('Usuarios') }}</p>
                 </a>
             </li>
             <li class="nav-item{{ $activePage == 'device-management' ? ' active' : '' }}">
                 <a class="nav-link" href="{{ route('device.index') }}">
                     <i class="material-icons">construction</i>
-                    <p>{{ __('Gestion de dispositivos') }}</p>
+                    <p>{{ __('Dispositivos') }}</p>
+                </a>
+            </li>
+            <li class="nav-item{{ $activePage == 'dump-management' ? ' active' : '' }}">
+                <a class="nav-link" href="{{ route('dump.index') }}">
+                    <i class="material-icons">delete</i>
+                    <p>{{ __('Basureros') }}</p>
                 </a>
             </li>
             <li class="nav-item{{ $activePage == 'map' ? ' active' : '' }}">

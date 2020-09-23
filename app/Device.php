@@ -9,4 +9,9 @@ class Device extends Model
     protected $fillable = [
         'name', 'serial',
     ];
+
+    public function dump()
+    {
+        return $this->hasOne('App\Dump');
+    }
 }
